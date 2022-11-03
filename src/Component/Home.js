@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import InputProps from './InputProps'
 import './Home.css'
-import { LogoDev, Person } from '@mui/icons-material'
+import { Person } from '@mui/icons-material'
+
 
 export const Home = () => {
+
+   const [admin, setAdmin] = useState(true)
+
   return (
     <div>
       <div className='heading'>
@@ -17,8 +21,11 @@ export const Home = () => {
       </div>
 
       <div className='link'>
-        
-        <Link to="admin">Admin Login</Link> &nbsp;&nbsp;
+      
+        {
+          admin ? (<Link to="admin">Admin Login</Link> ): null
+        }
+       &nbsp;&nbsp;
         <Link to="student">Student Login</Link>&nbsp;&nbsp;
         <Link to="teacher">Teacher Login</Link>&nbsp;&nbsp;
       </div>

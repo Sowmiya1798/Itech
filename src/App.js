@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { AdminLogin } from './Component/AdminLogin'
+import  AdminLogin  from './Component/AdminLogin'
 import { Home } from './Component/Home'
 import { StudentLogin } from './Component/StudentLogin'
 import { TeacherLogin } from './Component/TeacherLogin'
